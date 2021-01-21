@@ -24,7 +24,7 @@ if ( !users.name || !users.bio ){
     res.status(400).json({message: "Please provide name and bio for the user."})
 } else {
     try {
-        const newUser = await User.create(users);
+        const newUser = await User.createUser(users);
 
         res.status(201).json(newUser);
 
